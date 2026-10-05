@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Space | Informational Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f4f7fb;
+        }
+
+        /* Navigation */
+        nav {
+            background: #111827;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            background:
+                linear-gradient(rgba(15, 23, 42, .8), rgba(30, 41, 59, .85)),
+                url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #2563eb;
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .section-description {
+            max-width: 750px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: #555;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+            transition: transform .2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        /* Facts */
+        .facts {
+            background: #111827;
+            color: white;
+        }
+
+        .facts .section-title {
+            color: white;
+        }
+
+        .fact-box {
+            text-align: center;
+            padding: 25px;
+            background: #1f2937;
+            border-radius: 10px;
+        }
+
+        .fact-box strong {
+            display: block;
+            font-size: 2rem;
+            color: #60a5fa;
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🚀 Explore Space</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#objects">Space Objects</a></li>
+            <li><a href="#facts">Facts</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Explore the Universe</h1>
+
+            <p>
+                Discover fascinating information about planets, stars,
+                galaxies, black holes, and the incredible universe around us.
+            </p>
+
+            <a href="#about" class="button">Start Exploring</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+        <h2 class="section-title">What Is Space?</h2>
+
+        <p class="section-description">
+            Space is the vast region beyond Earth's atmosphere. It contains
+            planets, stars, galaxies, moons, asteroids, comets, and many
+            other objects. Scientists study space to better understand
+            the origins and evolution of our universe.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌌 Galaxies</h3>
+                <p>
+                    Galaxies are enormous collections of stars, gas, dust,
+                    and dark matter held together by gravity.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⭐ Stars</h3>
+                <p>
+                    Stars are massive balls of extremely hot plasma that
+                    produce energy through nuclear fusion.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🪐 Planets</h3>
+                <p>
+                    Planets orbit stars and can have very different sizes,
+                    temperatures, atmospheres, and compositions.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Space Objects -->
+    <section id="objects">
+        <h2 class="section-title">Amazing Objects in Space</h2>
+
+        <p class="section-description">
+            The universe contains objects that are both enormous and incredibly
+            strange. Here are a few of the most interesting.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🕳️ Black Holes</h3>
+                <p>
+                    Black holes are regions of space where gravity is so strong
+                    that nothing, including light, can escape once it passes
+                    the event horizon.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>☄️ Comets</h3>
+                <p>
+                    Comets are icy objects that travel through space. When they
+                    approach the Sun, they can develop glowing comas and tails.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌑 Moons</h3>
+                <p>
+                    Moons are natural satellites that orbit planets and other
+                    celestial bodies.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Facts -->
+    <section id="facts" class="facts">
+
+        <h2 class="section-title">Quick Space Facts</h2>
+
+        <p class="section-description">
+            Here are a few interesting facts to remember.
+        </p>
+
+        <div class="cards">
+
+            <div class="fact-box">
+                <strong>8</strong>
+                <span>Planets orbit our Sun.</span>
+            </div>
+
+            <div class="fact-box">
+                <strong>~4.6B</strong>
+                <span>Years old is our Solar System.</span>
+            </div>
+
+            <div class="fact-box">
+                <strong>1</strong>
+                <span>Star is at the center of our Solar System.</span>
+            </div>
+
+            <div class="fact-box">
+                <strong>∞</strong>
+                <span>The universe contains an enormous number of objects.</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Explore Space | Educational Website</p>
+        <p>Created with HTML & CSS</p>
+    </footer>
+
+</body>
+</html>
